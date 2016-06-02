@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <html lang = "en">
+ 
+  <head>
+      <title>Lotto</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta charset="utf-8">
+                    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       </head>
+  <body>
+ 
+  <div class = "container">
+    <div class = "col-md-6 col-md-offset-3">
+      <h2>If you buy x tickets per day, how many days will it take you to win the lotto?</h2>
+      
+  <br>
+  <div id ="answer"></div>
+     <br><br>
+  <p>Enter the number of tickets per day below:</p>
+<input type="text" id="numberoftickets"/>
+<button type="button" class="btn btn-success" onclick="init()">Let's find out!</button>
+   
+ 
+ 
+  </div>
+</div>
+ 
+<script>
+ 
+var counter = 0;
+   
+ 
+ function init(){
+ var a = document.getElementById('numberoftickets').value;
+var b = Number(a);
+var c = (176000000/b).toFixed(2);
+var d = c.toString();
+var e = (c/365).toFixed(2);
+var f = e.toString();
+document.getElementById('answer').innerHTML = "If you buy " + a + " tickets per day, it will take you " + c + " days- which is " + f + " years, to win the lotto. Good luck!";
+}
+   
+ 
+      </script>
+      </body>
+</html>
